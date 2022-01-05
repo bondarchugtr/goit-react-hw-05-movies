@@ -12,6 +12,7 @@ export default function CastItem({ id, character, name, src }) {
           width="200px"
           height="298px"
         />
+
         <div className={s.cast__actors}>
           <p>{character} </p>
           <p>{name}</p>

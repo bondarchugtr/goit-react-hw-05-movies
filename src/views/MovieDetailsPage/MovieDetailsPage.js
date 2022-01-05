@@ -38,6 +38,22 @@ export default function MovieParamCard() {
     original_name,
   } = movieCard;
 
+  // const onClickButton = (type) => {
+  //   let loc = "";
+  //   if (!location.state) {
+  //     const str = location.pathname.split("/");
+  //     loc = `/${str[1]}/${str[2]}`;
+  //   } else {
+  //     console.log(location.pathname);
+  //     loc = location.state?.prevLoc ?? location.pathname;
+  //     console.log(location.pathname.split("/"));
+  //   }
+  //   console.log(loc);
+  //   console.log(type);
+  //   navigate(`${loc}/${type}`, { state: { ...location.state, prevLoc: loc } });
+  //   console.log(location.state.prevLoc);
+  // };
+
   const goBack = () => {
     navigate(location?.state?.from ?? "/movies");
   };
@@ -98,9 +114,23 @@ export default function MovieParamCard() {
         <Link to={`cast`} className={s.link__details}>
           Cast
         </Link>
-        <Link to={`reviews`} className={s.link__details}>
+        {/* <Link to={`reviews`} className={s.link__details}>
           Reviews
-        </Link>
+        </Link> */}
+        {/* <Button
+          onClick={() => {
+            onClickButton("cast");
+          }}
+        >
+          Cast
+        </Button> */}
+        {/* <Button
+          onClick={() => {
+            onClickButton("review");
+          }}
+        >
+          Review
+        </Button> */}
       </div>
       <Suspense fallback={<ThreeDots />}>
         <Routes>
