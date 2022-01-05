@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/723.736a25b9.chunk.css","mappings":"AAAA,mCACE,iBACF","sources":["components/Reviews/ReviewsItem.module.css"],"sourcesContent":[".reviews__title {\n  text-align: center;\n}\n"],"names":[],"sourceRoot":""}
