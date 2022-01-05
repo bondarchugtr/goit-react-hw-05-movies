@@ -16,6 +16,7 @@
 .details__movie__about__title {
   margin: 0;
   text-align: center;
+  margin-top: 15px;
 }
 .link__details__block {
   display: flex;
@@ -72,9 +73,7 @@
 .details__options__list {
   margin-bottom: 15px;
 }
-.details__movie__about__title {
-  /* margin-top: 0px; */
-}
+
 .details__movie__about__text {
-  margin-top: 0px;
+  margin-top: 10px;
 }

@@ -114,9 +114,9 @@ export default function MovieParamCard() {
         <Link to={`cast`} className={s.link__details}>
           Cast
         </Link>
-        {/* <Link to={`reviews`} className={s.link__details}>
+        <Link to={`reviews`} className={s.link__details}>
           Reviews
-        </Link> */}
+        </Link>
         {/* <Button
           onClick={() => {
             onClickButton("cast");
