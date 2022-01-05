@@ -1,0 +1,41 @@
+.form__block {
+  position: sticky;
+  top: 0;
+  margin-top: 15px;
+  z-index: 1000;
+}
+
+.form {
+  width: 100%;
+}
+
+.input {
+  padding: 15px;
+  width: 100%;
+  margin: 0;
+  border-color: rgb(236, 228, 217);
+  background: rgb(236, 228, 217, 0.7);
+}
+
+.button__submit {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  right: 1%;
+  top: 12%;
+  padding: 5px;
+  background-color: rgb(153, 227, 229);
+  border-radius: 5px;
+  border: 1px solid tan;
+  transition: all 0.5s ease-out;
+}
+
+.button__submit:hover,
+.button__submit:focus {
+  transform: scale(1.1);
+  transition: transform var(--animation-duration) var(--timing-function);
+  transition: all 0.5s ease-out;
+}

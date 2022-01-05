@@ -1,0 +1,24 @@
+.gallery__item__movie {
+  width: 280px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.gallery__item__movie:last-child {
+  margin-bottom: 0;
+}
+
+.gallery__item__movie:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px 5px rgb(197, 193, 191);
+}
+
+.gallery__item__movie__title {
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  color: rgb(36, 65, 90);
+}

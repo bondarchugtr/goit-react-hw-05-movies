@@ -1,0 +1,26 @@
+.nav__menu__container {
+  background-color: aqua;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav__menu__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.nav__menu__item {
+  padding: 5px;
+  margin-right: 35px;
+  border: 1px solid teal;
+  border-color: brown;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav__menu__item:hover,
+.nav__menu__item:focus {
+  transform: scale(1.1);
+  transition: transform var(--animation-duration) var(--timing-function);
+  transition: all 0.5s ease-out;
+}

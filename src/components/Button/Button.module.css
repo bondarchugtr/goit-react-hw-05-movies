@@ -1,0 +1,21 @@
+.block_button {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  width: 150px;
+  padding: 5px;
+  background-color: rgb(153, 227, 229);
+  border-radius: 5px;
+  border: 1px solid tan;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.1);
+  transition: transform var(--animation-duration) var(--timing-function);
+  transition: all 0.5s ease-out;
+}
