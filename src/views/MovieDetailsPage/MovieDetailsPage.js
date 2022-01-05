@@ -60,39 +60,29 @@ export default function MovieParamCard() {
         />
         <div className={s.details__content}>
           <h2 className={s.details__content__title}>{original_title}</h2>
+          <p className={""}>{overview}</p>
           <table className={s.details__movie__table}>
-            <p className={""}>{overview}</p>
             <tbody className={s.details__options__list}>
               <tr className={""}>
-                <td className="modal-one-movie__table--first-list">{genres}</td>
-                <td className="modal-one-movie__table--second-list">
-                  <span className="modal-one-movie__text-box-accent">
-                    {vote_average}
-                  </span>
-                  <span className="modal-one-movie__text-box-secondary">
+                <td className={s.movie__table__list}>{genres}</td>
+                <td className={s.movie__table__second__list}>
+                  <span className={s.movie__text__box}>{vote_average}</span>
+                  <span className={s.movie__text__box__secondary}>
                     {vote_count}
                   </span>
                 </td>
               </tr>
-              <tr className="modal-one-movie__table--row">
-                <td className="modal-one-movie__table--first-list">
-                  Popularity
-                </td>
-                <td className="modal-one-movie__table--second-list">
-                  {popularity}
-                </td>
+              <tr className={s.movie__table__row}>
+                <td className={s.movie__table__list}>Popularity</td>
+                <td className={s.movie__table__second__list}>{popularity}</td>
               </tr>
               <tr className="modal-one-movie__table--row">
-                <td className="modal-one-movie__table--first-list">Genre</td>
-                <td className="modal-one-movie__table--second-list">
-                  {genres}
-                </td>
+                <td className={s.movie__table__list}>Genre</td>
+                <td className={s.movie__table__second__list}>{genres}</td>
               </tr>
               <tr className="modal-one-movie__table--row">
-                <td className="modal-one-movie__table--first-list">
-                  Original title
-                </td>
-                <td className="modal-one-movie__table--second-list uppercase-title">
+                <td className={s.movie__table__list}>Original title</td>
+                <td className={s.movie__table__second__list}>
                   {original_title}
                 </td>
               </tr>

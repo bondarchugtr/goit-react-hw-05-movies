@@ -4,12 +4,14 @@ import { useLocation } from "react-router";
 import { RenderCastCard } from "../Api/Api";
 import CastItem from "./CastItem";
 import s from "./Cast.module.css";
+import { scrollTop } from "../Scroll/scrollTop";
 export default function CastList() {
   const [idMovie, setIdMovie] = useState(null);
   const location = useLocation();
   const params = useParams();
   useEffect(() => {
     RenderCastCard(params.id).then((params) => setIdMovie(params.cast));
+    scrollTop();
   }, []);
   return (
     <div className={s.cast__container}>
