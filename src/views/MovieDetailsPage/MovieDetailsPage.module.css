@@ -5,7 +5,8 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background: rgb(94, 181, 207);
+  background: rgb(170, 178, 180);
+  border-radius: 5px;
 }
 
 .details__image {
@@ -29,11 +30,12 @@
   display: inline-block;
   width: 150px;
   padding: 5px;
-  background-color: rgb(153, 227, 229);
+  background-color: rgb(62 73 73);
   border-radius: 5px;
   border: 1px solid tan;
   margin-top: 30px;
   margin-bottom: 30px;
+  color: aliceblue;
 }
 .link__details:not(:last-child) {
   margin-right: 35px;

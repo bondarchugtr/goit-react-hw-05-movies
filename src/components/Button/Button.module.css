@@ -6,11 +6,13 @@
   display: inline-block;
   width: 150px;
   padding: 5px;
-  background-color: rgb(153, 227, 229);
+  background-color: rgb(62 73 73);
   border-radius: 5px;
   border: 1px solid tan;
   margin-top: 30px;
   margin-bottom: 30px;
+  color: #eee8dc;
+  cursor: pointer;
 }
 
 .button:hover,
