@@ -23,10 +23,14 @@ export function Layout() {
       <nav className={s.nav__menu__container}>
         <ul className={s.nav__menu__list}>
           <li className={s.nav__menu__item}>
-            <CustomLink to="/">Home</CustomLink>
+            <CustomLink to="/" className={s.nav__menu__text}>
+              Home
+            </CustomLink>
           </li>
           <li className={s.nav__menu__item}>
-            <CustomLink to="/movies">Movies</CustomLink>
+            <CustomLink to="/movies" className={s.nav__menu__text}>
+              Movies
+            </CustomLink>
           </li>
         </ul>
       </nav>

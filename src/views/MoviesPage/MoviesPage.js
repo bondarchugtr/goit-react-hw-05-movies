@@ -25,7 +25,7 @@ export default function MoviesSearchPage() {
 
     setMovieSearch(movie);
     navigate({
-      ...location,
+      ...location.state,
       search: `query=${movie}`,
     });
     setMovie("");

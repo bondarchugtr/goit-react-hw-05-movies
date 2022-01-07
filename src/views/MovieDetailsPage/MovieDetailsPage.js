@@ -95,10 +95,19 @@ export default function MovieParamCard() {
         </div>
       </div>
       <div className={s.link__details__block}>
-        <Link to={`cast`} className={s.link__details}>
+        <Link
+          to={`cast`}
+          state={{ from: location.state.from }}
+          className={s.link__details}
+        >
           Cast
         </Link>
-        <Link to={`reviews`} className={s.link__details}>
+
+        <Link
+          to={`reviews`}
+          className={s.link__details}
+          state={{ from: location.state.from }}
+        >
           Reviews
         </Link>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { RenderCastCard } from "../Api/Api";
 import CastItem from "./CastItem";
 import s from "./Cast.module.css";
@@ -13,6 +13,7 @@ export default function CastList() {
     RenderCastCard(params.id).then((params) => setIdMovie(params.cast));
     scrollTop();
   }, []);
+
   return (
     <div className={s.cast__container}>
       {idMovie && (

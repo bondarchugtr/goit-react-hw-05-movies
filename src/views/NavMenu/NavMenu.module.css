@@ -1,7 +1,8 @@
 .nav__menu__container {
-  background-color: aqua;
+  background-color: rgb(62, 73, 73);
   padding-top: 15px;
   padding-bottom: 15px;
+  text-decoration: none;
 }
 
 .nav__menu__list {
@@ -12,10 +13,12 @@
 .nav__menu__item {
   padding: 5px;
   margin-right: 35px;
-  border: 1px solid teal;
-  border-color: brown;
   border-radius: 5px;
   cursor: pointer;
+  color: rgb(241, 219, 15);
+}
+.nav__menu__text {
+  color: rgb(238, 232, 220);
 }
 
 .nav__menu__item:hover,

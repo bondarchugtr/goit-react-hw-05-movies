@@ -5,7 +5,8 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background: rgb(94, 181, 207);
+  background: rgb(170, 178, 180);
+  border-radius: 5px;
 }
 
 .details__image {
@@ -16,6 +17,7 @@
 .details__movie__about__title {
   margin: 0;
   text-align: center;
+  margin-top: 15px;
 }
 .link__details__block {
   display: flex;
@@ -28,11 +30,12 @@
   display: inline-block;
   width: 150px;
   padding: 5px;
-  background-color: rgb(153, 227, 229);
+  background-color: rgb(62 73 73);
   border-radius: 5px;
   border: 1px solid tan;
   margin-top: 30px;
   margin-bottom: 30px;
+  color: aliceblue;
 }
 .link__details:not(:last-child) {
   margin-right: 35px;
@@ -45,10 +48,9 @@
 }
 .movie__text__box {
   padding: 1px 10px;
-  /* background: $second-accent-btn-color; */
+  background: burlywood;
   border-radius: 5px;
   margin-right: 11px;
-  /* color: $secondary-title-text-color; */
   position: relative;
 }
 
@@ -60,12 +62,11 @@
 
 .movie__text__box__secondary {
   padding: 1px 10px;
-  /* background: $arrow-btn-color; */
+  background: burlywood;
   border-radius: 5px;
-  margin-right: 11px;
 }
 .movie__table__list {
-  width: 108px;
+  width: 240px;
 }
 .movie__table__second__list,
 .movie__table__row {
@@ -74,9 +75,7 @@
 .details__options__list {
   margin-bottom: 15px;
 }
-.details__movie__about__title {
-  /* margin-top: 0px; */
-}
+
 .details__movie__about__text {
-  margin-top: 0px;
+  margin-top: 10px;
 }
