@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import MovieSearch from "../../components/MovieListSearch/MovieListSearch";
+import { NoMatch } from "../NavMenu/NavMenu";
+import { toast } from "react-toastify";
+
 import s from "./MoviesPage.module.css";
 export default function MoviesSearchPage() {
   const [movieSearch, setMovieSearch] = useState("");
@@ -20,6 +23,7 @@ export default function MoviesSearchPage() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     if (movie.trim() === "") {
+      toast.warn("input name movie");
       return;
     }
 

@@ -3,7 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./views/NavMenu/NavMenu";
 import { NoMatch } from "./views/NavMenu/NavMenu";
 import ThreeDots from "./components/Loader/Loader";
+import { ToastContainer } from "react-toastify";
+
 import "modern-normalize/modern-normalize.css";
+import "react-toastify/dist/ReactToastify.css";
+
 const HomePage = lazy(() => import("./views/HomePage/HomePage"));
 const MoviesSearchPage = lazy(() => import("./views/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
@@ -13,6 +17,7 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<ThreeDots />}>
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

@@ -2,6 +2,8 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { RenderParamsCard } from "../../components/Api/Api";
 import { useLocation, useParams } from "react-router";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
+import { NoMatch } from "../NavMenu/NavMenu";
+import PropTypes from "prop-types";
 import noImg from "../../image/no-img.png";
 
 import s from "./MovieDetailsPage.module.css";
@@ -16,13 +18,15 @@ export default function MovieParamCard() {
   const params = useParams();
   let location = useLocation();
   let navigate = useNavigate();
-
   useEffect(() => {
     if (params.id) {
       setLoading(true);
       RenderParamsCard(params.id)
         .then((param) => setMovieCard(param))
-        .finally(() => setLoading(false));
+        .finally(() => setLoading(false))
+        .catch((error) => {
+          NoMatch();
+        });
     }
   }, []);
   const genres = movieCard.genres
@@ -37,7 +41,6 @@ export default function MovieParamCard() {
     poster_path,
     original_name,
   } = movieCard;
-
   const goBack = () => {
     navigate(location?.state?.from ?? "/movies");
   };
@@ -120,3 +123,15 @@ export default function MovieParamCard() {
     </>
   );
 }
+
+MovieParamCard.propTypes = {
+  movieCard: PropTypes.object,
+  params: PropTypes.object,
+  location: PropTypes.object,
+  original_title: PropTypes.string,
+  overview: PropTypes.string,
+  vote_average: PropTypes.number,
+  popularity: PropTypes.number,
+  poster_path: PropTypes.string,
+  original_name: PropTypes.string,
+};

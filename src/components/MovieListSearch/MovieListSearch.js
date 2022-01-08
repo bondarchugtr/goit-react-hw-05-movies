@@ -3,6 +3,8 @@ import { RenderMovieSearch } from "../Api/Api";
 import MovieListItem from "../MovieListItem/MovieListItem";
 import ThreeDots from "../Loader/Loader";
 import { scrollTop } from "../Scroll/scrollTop";
+import PropTypes from "prop-types";
+
 import s from "../../views/HomePage/HomePage.module.css";
 import Button from "../../components/Button/Button";
 
@@ -11,7 +13,6 @@ export default function MovieSearch({ movie }) {
   const [currentMovie, setCurrentMovie] = useState("");
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     if (!movie) {
       return;
@@ -19,10 +20,11 @@ export default function MovieSearch({ movie }) {
     if (movie) {
       setLoading(true);
       RenderMovieSearch(movie, page)
-        .then((data) =>
-          setMovieArraySearch([...movieArraySearch, ...data.results])
-        )
-        .finally(() => setLoading(false));
+        .then((data) => {
+          setMovieArraySearch([...movieArraySearch, ...data.results]);
+        })
+        .finally(() => setLoading(false))
+        .catch((error) => {});
     }
     if (movie !== currentMovie) clearOnNewRequest();
   }, [currentMovie, movie, page]);
@@ -61,3 +63,9 @@ export default function MovieSearch({ movie }) {
     </>
   );
 }
+
+MovieSearch.propTypes = {
+  movieArraySearch: PropTypes.array,
+  currentMovie: PropTypes.string,
+  page: PropTypes.number,
+};
