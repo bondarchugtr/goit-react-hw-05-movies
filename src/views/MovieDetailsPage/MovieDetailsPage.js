@@ -2,10 +2,9 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { RenderParamsCard } from "../../components/Api/Api";
 import { useLocation, useParams } from "react-router";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
-import { NoMatch } from "../NavMenu/NavMenu";
 import PropTypes from "prop-types";
 import noImg from "../../image/no-img.png";
-
+import { ToastContainer, toast } from "react-toastify";
 import s from "./MovieDetailsPage.module.css";
 import Button from "../../components/Button/Button";
 import ThreeDots from "../../components/Loader/Loader";
@@ -25,7 +24,7 @@ export default function MovieParamCard() {
         .then((param) => setMovieCard(param))
         .finally(() => setLoading(false))
         .catch((error) => {
-          NoMatch();
+          "";
         });
     }
   }, []);

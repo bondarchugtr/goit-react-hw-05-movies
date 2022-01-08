@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./views/NavMenu/NavMenu";
 import { NoMatch } from "./views/NavMenu/NavMenu";
 import ThreeDots from "./components/Loader/Loader";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 
 import "modern-normalize/modern-normalize.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<ThreeDots />}>
-        <ToastContainer
+        {/* <ToastContainer
           position="top-right"
           autoClose={5000}
           hideProgressBar={false}
@@ -26,8 +26,8 @@ export default function App() {
           rtl={false}
           pauseOnFocusLoss
           draggable
-          pauseOnHover
-        />
+          pauseOnHover */}
+        {/* /> */}
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
