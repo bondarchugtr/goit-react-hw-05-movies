@@ -4,7 +4,6 @@ import { useLocation, useParams } from "react-router";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import noImg from "../../image/no-img.png";
-import { ToastContainer, toast } from "react-toastify";
 import s from "./MovieDetailsPage.module.css";
 import Button from "../../components/Button/Button";
 import ThreeDots from "../../components/Loader/Loader";

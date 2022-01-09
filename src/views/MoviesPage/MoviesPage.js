@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import MovieSearch from "../../components/MovieListSearch/MovieListSearch";
-import { NoMatch } from "../NavMenu/NavMenu";
 import { toast } from "react-toastify";
 
 import s from "./MoviesPage.module.css";
